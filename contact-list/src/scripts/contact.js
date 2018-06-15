@@ -1,15 +1,11 @@
-const Database = require("./contact-collection");
-
-const allContacts = Database.load("ContactDatabase");
+// Function to display a single contact object
 
 const displayContact = (contact) => {
   const name = `Name: ${contact.firstName} ${contact.lastName}\n`;
   const phone = `Phone: ${contact.phoneNum}\n`;
-  const address = `Address: ${contact.address}\n\n`;
+  const address = `Address: ${contact.address}\n`;
   const fullContact = name + phone + address;
   return fullContact;
-}
-
-console.log(displayContact(allContacts.contactCollection[1]));
+};
 
 module.exports = displayContact;
