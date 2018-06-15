@@ -15,4 +15,4 @@ const showContactList = () => {
   listSection.appendChild(fragment);
 };
 
-showContactList();
+module.exports = showContactList();

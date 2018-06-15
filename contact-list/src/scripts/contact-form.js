@@ -37,6 +37,7 @@ createForm();
 
 const submitForm = () => {
   const allInputs = document.querySelectorAll(`input`);
+
   const newContact = {
     firstName: allInputs[0].value,
     lastName: allInputs[1].value,
