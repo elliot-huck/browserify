@@ -8,11 +8,11 @@ const showContactList = () => {
   const fragment = document.createDocumentFragment();
 
   allContacts.forEach(contact => {
-    const paragraph = document.createElement("p");
-    paragraph.textContent = displayContact(contact);
-    fragment.appendChild(paragraph);
+    fragment.appendChild(displayContact(contact));
   });
 
   const listSection = document.querySelector("#contact-list");
   listSection.appendChild(fragment);
 };
+
+showContactList();

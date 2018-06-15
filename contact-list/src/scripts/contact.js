@@ -1,11 +1,21 @@
 // Function to display a single contact object
 
 const displayContact = (contact) => {
-  const name = `Name: ${contact.firstName} ${contact.lastName}\n`;
-  const phone = `Phone: ${contact.phoneNum}\n`;
-  const address = `Address: ${contact.address}\n`;
-  const fullContact = name + phone + address;
-  return fullContact;
+  const contactSection = document.createElement("section");
+
+  const name = document.createElement("h4");
+  name.textContent = `Name: ${contact.firstName} ${contact.lastName}`;
+  contactSection.appendChild(name);
+
+  const phone = document.createElement("p");
+  phone.textContent = `Phone: ${contact.phoneNum}`;
+  contactSection.appendChild(phone);
+
+  const address = document.createElement("p");
+  address.textContent = `Address: ${contact.address}`;
+  contactSection.appendChild(address);
+  
+  return contactSection;
 };
 
 module.exports = displayContact;
