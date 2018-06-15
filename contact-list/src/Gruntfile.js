@@ -9,7 +9,7 @@ module.exports = function (grunt) {
           "./styles/**/*.css",
           "!node_modules/**/*.js"
         ],
-        tasks: ["eslint", "browserify", "copy", "uglify"],
+        tasks: ["eslint", "copy", "browserify", "uglify"],
         options: {
           spawn: false
         }
@@ -70,5 +70,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-eslint");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-uglify-es");
-  grunt.registerTask("default", ["eslint", "browserify", "copy", "uglify", "watch"]);
+  grunt.registerTask("default", ["eslint", "copy", "browserify", "uglify", "watch"]);
 };
