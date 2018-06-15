@@ -32,6 +32,6 @@ const Database = Object.create({}, {
   }
 });
 
-Database.save(ContactDatabase, "ContactDatabase");
+// Database.save(ContactDatabase, "ContactDatabase");
 
 module.exports = Database;
