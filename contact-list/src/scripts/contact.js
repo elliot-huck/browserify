@@ -14,7 +14,7 @@ const displayContact = (contact) => {
   const address = document.createElement("p");
   address.textContent = `Address: ${contact.address}`;
   contactSection.appendChild(address);
-  
+
   return contactSection;
 };
 

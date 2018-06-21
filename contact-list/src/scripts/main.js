@@ -2,6 +2,12 @@
 
 const showContactList = require("./contact-list.js");
 const createContactForm = require("./contact-form.js");
+const Database = require("./database-methods");
+const contactDatabase = require("./contact-collection");
+
+if (localStorage.getItem("ContactDatabase") === null) {
+  Database.save(contactDatabase, "ContactDatabase");
+}
 
 showContactList();
 createContactForm();

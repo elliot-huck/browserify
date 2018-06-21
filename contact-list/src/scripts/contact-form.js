@@ -1,4 +1,6 @@
-const Database = require("./contact-collection");
+const Database = require("./database-methods");
+
+const contactForm = () => {
 
 const contactDatabase = Database.load("ContactDatabase");
 const allContacts = contactDatabase.contactCollection;
@@ -23,7 +25,7 @@ const createForm = () => {
     fragment.appendChild(inputLabel);
     fragment.appendChild(input);
   });
-  
+
   const submitButton = document.createElement("button");
   submitButton.textContent = `Submit`;
   submitButton.setAttribute("id", "submit");
@@ -51,3 +53,6 @@ const submitForm = () => {
 
 const formSubmit = document.querySelector(`#submit`);
 formSubmit.addEventListener(`click`, submitForm);
+
+};
+module.exports = contactForm;

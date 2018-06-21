@@ -1,10 +1,11 @@
-const Database = require("./contact-collection");
+const Database = require("./database-methods");
 const displayContact = require("./contact");
 
-const ContactDatabase = Database.load("ContactDatabase");
-const allContacts = ContactDatabase.contactCollection;
 
 const showContactList = () => {
+  const ContactDatabase = Database.load("ContactDatabase");
+  const allContacts = ContactDatabase.contactCollection;
+
   const fragment = document.createDocumentFragment();
 
   allContacts.forEach(contact => {
