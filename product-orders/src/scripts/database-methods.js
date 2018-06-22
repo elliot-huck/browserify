@@ -1,3 +1,5 @@
+// Simple database methods to save and load from local storage
+// Required by: 
 
 const Database = Object.create({}, {
   save: {

@@ -1,3 +1,5 @@
+// A database to hold info on all the reviews that have been written for every product
+// Required by: review-list
 
 const reviews = {
   allReviews: [
@@ -8,3 +10,5 @@ const reviews = {
     }
   ]
 };
+
+module.exports = reviews;
