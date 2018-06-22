@@ -5,9 +5,10 @@ const createContactForm = require("./contact-form.js");
 const Database = require("./database-methods");
 const contactDatabase = require("./contact-collection");
 
-if (localStorage.getItem("ContactDatabase") === null) {
+if (Database.load("ContactDatabase") === null) {
   Database.save(contactDatabase, "ContactDatabase");
 }
 
 showContactList();
 createContactForm();
+
