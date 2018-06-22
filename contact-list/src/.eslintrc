@@ -13,6 +13,6 @@
             "backtick"
         ],
         "eqeqeq": "error",
-        "no-trailing-spaces": "off"
+        "no-trailing-spaces": "warn"
     }
 }

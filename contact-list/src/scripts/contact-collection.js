@@ -1,6 +1,5 @@
 
-
-const ContactDatabase = {
+const contactDatabase = {
   contactCollection: [
     {
       firstName: `Alice`,
@@ -17,21 +16,6 @@ const ContactDatabase = {
   ]
 };
 
-const Database = Object.create({}, {
-  save: {
-    value: (databaseObject, localStorageKey) => {
-      const stringifiedDatabase = JSON.stringify(databaseObject);
-      localStorage.setItem(localStorageKey, stringifiedDatabase);
-    }
-  },
-  load: {
-    value: (localStorageKey) => {
-      const databaseString = localStorage.getItem(localStorageKey);
-      return JSON.parse(databaseString);
-    }
-  }
-});
+module.exports = contactDatabase;
 
-// Database.save(ContactDatabase, "ContactDatabase");
 
-module.exports = Database;

@@ -1,10 +1,14 @@
-const Database = require("./contact-collection");
+const Database = require("./database-methods");
 const displayContact = require("./contact");
+const contactDatabase = require("./contact-collection");
 
-const ContactDatabase = Database.load("ContactDatabase");
-const allContacts = ContactDatabase.contactCollection;
 
 const showContactList = () => {
+  // Database.save(contactDatabase, "ContactDatabase");
+  const ContactDatabase = Database.load("ContactDatabase");
+  console.log(ContactDatabase);
+  const allContacts = ContactDatabase.contactCollection;
+
   const fragment = document.createDocumentFragment();
 
   allContacts.forEach(contact => {
@@ -12,7 +16,10 @@ const showContactList = () => {
   });
 
   const listSection = document.querySelector("#contact-list");
+  while (listSection.firstChild) {
+    listSection.removeChild(listSection.firstChild);
+  }
   listSection.appendChild(fragment);
 };
 
-showContactList();
+module.exports = showContactList;
