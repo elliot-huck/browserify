@@ -1,3 +1,5 @@
+// Takes in the database, makes a product card for every product in the database, and prepends each card to the DOM
+
 const products = require("./product-database");
 const displayProduct = require("./display-product");
 
