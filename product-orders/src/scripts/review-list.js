@@ -10,9 +10,11 @@ const appendReviews = () => {
   const allReviews = reviews.allReviews;
   console.log(allReviews);
 
-  $.each($allCards, (i) => {
+  $.each($allCards, i => {
     const $currentCard = $allCards[i];
+    console.log($currentCard);
     // This is where I go back to ugly vanilla JS
+    // Bonus challenge: refactor without the vanilla JS
     const cardHeading = $currentCard.firstElementChild.textContent;
     const reviewSection = $currentCard.lastElementChild;
     const reviewHeading = document.createElement(`h4`);
