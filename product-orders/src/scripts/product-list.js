@@ -8,7 +8,7 @@ const listProducts = () => {
   allProducts.forEach(product => {
     $productCard = displayProduct(product);
     $(`body`).prepend($productCard);
-  })
+  });
 };
 
 module.exports = listProducts;

@@ -1,10 +1,8 @@
-// A method to display an individual review to a card on the DOM
+// A method to display an individual review
 
 const displayReview = (element) => {
-  const $reviewCard = $("<section>").addClass("review__card");
-  $("<p>").text(`${element.reviewerName} says: "${reviewContents}"`);
-
-  return $reviewCard;
-};
+  const $review = $("<p>").text(`${element.reviewerName} says: "${element.reviewContents}"`);
+  return $review;
+  };
 
 module.exports = displayReview;

@@ -7,6 +7,7 @@ const displayProduct = (element) => {
   $(`<h4>`).text(`${element.productDescription}`).appendTo($productCard);
   $(`<p>`).text(`Price: $${element.price}`).appendTo($productCard);
   $(`<p>`).text(`In stock: ${element.quantity}`).appendTo($productCard);
+  $(`<section>`).addClass(`reviews`).appendTo($productCard);
   return $productCard;
 };
 
