@@ -4,24 +4,24 @@
 const products = {
   allProducts: [
     {
-      productName: `Plush Owl`,
+      productName: `Plush owl`,
       productDescription: `An adorable little stuffed owl`,
-      price: `$10.00`,
-      quantity: `50`,
+      price: 9.99,
+      quantity: 50,
       imageSrc: `./images/owl_plush.jpg`
     },
     {
-      productName: `Rubik's Cube`,
+      productName: `Rubik's cube`,
       productDescription: `The classic puzzle toy`,
-      price: `$5.00`,
-      quantity: `30`,
+      price: 4.99,
+      quantity: 30,
       imageSrc: `./images/rubiks_cube.jpg`
     },
     {
-      productName: `Teddy Bear`,
+      productName: `Teddy bear`,
       productDescription: `An original children's favorite`,
-      price: `$10.00`,
-      quantity: `100`,
+      price: 9.99,
+      quantity: 100,
       imageSrc: `./images/teddy_bear.jpg`
     }
   ]
